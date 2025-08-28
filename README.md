@@ -1,17 +1,13 @@
-# 🍽️ Food Waste Reduction Tracker (Phase I - Console)
+# 🍽️ SAVE BITE (Phase I - Console)
 
 ## 📌 Project Overview
-The **Food Waste Reduction Tracker** is a Java-based console application designed to help individuals and households minimize food waste.  
+The **Save Bite** is a Java-based console application designed to help individuals and households minimize food waste.  
 In this **Phase I**, the project focuses on **basic food inventory management** through the terminal.  
 Users can:
 - Add food items with details (name, quantity, expiry date).
 - View all stored food items.
 - Remove consumed/expired items.
 - Track expiry dates to avoid unnecessary waste.
-
-This project lays the foundation for the later phases:
-- **Phase II**: Database Integration
-- **Phase III**: JavaFX GUI with advanced features
 
 ---
 
@@ -43,3 +39,64 @@ By giving users a **simple digital tracker**, this application aims to:
 ---
 
 ## 📂 Project Structure
+```
+FoodWasteReductionTracker/
+│── Main.java
+│── FoodItem.java
+│── FoodTracker.java
+│── README.md
+
+```
+---
+
+## 📊 UML Class Diagram  
+
+```
+class FoodItem {
+  - String name
+  - int quantity
+  - String expiryDate
+  
+  + FoodItem(String name, int quantity, String expiryDate)
+  + getName(): String
+  + setName(String name): void
+  + getQuantity(): int
+  + setQuantity(int quantity): void
+  + getExpiryDate(): String
+  + setExpiryDate(String expiryDate): void
+  + toString(): String
+}
+
+class FoodTracker {
+  - List<FoodItem> foodList
+  
+  + FoodTracker()
+  + addFoodItem(FoodItem item): void
+  + removeFoodItem(String name): boolean
+  + viewAllItems(): void
+  + findItemByName(String name): FoodItem
+  + getTotalItems(): int
+}
+
+class Main {
+  + main(String[] args): void
+  - displayMenu(): void
+  - handleUserChoice(int choice, FoodTracker tracker, Scanner sc): void
+}
+```
+## Sample Output
+```
+==== Food Waste Reduction Tracker (Phase I) ====
+
+==== Menu ====
+1. Add Food Item
+2. View All Items
+3. Check Expired Items (expired or expiring today)
+4. Remove Item (by name)
+5. Update Item (by name)
+6. Search Item (by name)
+7. Show Near-expiry Items (next N days)
+8. Clear All Data
+9. Exit
+Enter your choice:
+```
