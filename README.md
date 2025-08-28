@@ -1,65 +1,45 @@
-🍴 SaveBite (Phase I - Console)
-📌 Project Overview
+# 🍽️ Food Waste Reduction Tracker (Phase I - Console)
 
-SaveBite is a Java-based console application that helps individuals and households reduce food waste. In this phase, the focus is on building a simple command-line program where users can:
+## 📌 Project Overview
+The **Food Waste Reduction Tracker** is a Java-based console application designed to help individuals and households minimize food waste.  
+In this **Phase I**, the project focuses on **basic food inventory management** through the terminal.  
+Users can:
+- Add food items with details (name, quantity, expiry date).
+- View all stored food items.
+- Remove consumed/expired items.
+- Track expiry dates to avoid unnecessary waste.
 
-Add food items with details like name, quantity, and expiry date.
+This project lays the foundation for the later phases:
+- **Phase II**: Database Integration
+- **Phase III**: JavaFX GUI with advanced features
 
-View the list of stored items.
+---
 
-Track and check items nearing expiry.
+## 🎯 Problem Statement
+Food waste is a global issue, leading to:
+- Huge **economic losses** every year.
+- Significant **environmental damage** (greenhouse gas emissions, wasted resources).  
 
-Delete or update food items as needed.
+By giving users a **simple digital tracker**, this application aims to:
+- Reduce waste at the household level.
+- Build better habits for sustainable living.
+- Save money by consuming food before expiry.
 
-This phase lays the foundation for future enhancements with database integration (Phase II) and a JavaFX GUI (Phase III).
+---
 
-🎯 Features (Phase I - Console)
+## 🚀 Features (Phase I - Console)
+✅ Add new food items with expiry date  
+✅ View all items in the list  
+✅ Remove items once consumed/expired  
+✅ Simple console-based menu system  
 
-Add new food items.
+---
 
-View all stored food items.
+## 🛠️ Tech Stack
+- **Language**: Java (JDK 17 or later)  
+- **Paradigm**: Object-Oriented Programming (OOP)  
+- **Tools**: Any IDE (IntelliJ, Eclipse, VS Code)  
 
-Track expiry dates.
+---
 
-Remove consumed or expired items.
-
-Update food item details.
-
-🏗️ Project Structure
-FoodWasteTracker/
-│── src/
-│   ├── Main.java
-│   ├── FoodItem.java
-│   ├── FoodTracker.java
-│── README.md
-
-📊 Class UML Diagram
-classDiagram
-    class FoodItem {
-        - String name
-        - int quantity
-        - LocalDate expiryDate
-        + FoodItem(name, quantity, expiryDate)
-        + getName()
-        + getQuantity()
-        + getExpiryDate()
-        + setQuantity(quantity)
-        + toString()
-    }
-
-    class FoodTracker {
-        - List~FoodItem~ foodList
-        + addFoodItem(FoodItem)
-        + removeFoodItem(String name)
-        + viewAllItems()
-        + checkExpiryItems()
-        + updateFoodItem(String name, int quantity, LocalDate expiryDate)
-    }
-
-    class Main {
-        + main(String[] args)
-    }
-
-    FoodTracker --> FoodItem
-    Main --> FoodTracker
-
+## 📂 Project Structure
